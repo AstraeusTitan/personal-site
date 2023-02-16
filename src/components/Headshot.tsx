@@ -8,6 +8,7 @@ const Headshot: FC = () => {
       className="
         relative
         max-h-xs
+        h-fit
         max-w-xs
         before:absolute
         before:transition-all
