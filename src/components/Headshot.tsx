@@ -17,7 +17,8 @@ const Headshot: FC = () => {
         before:w-full
         before:h-full
         before:bg-sky-400
-        before:opacity-30
+        before:opacity-0
+        hoverable:before:opacity-30
         before:rounded-lg
         after:absolute
         after:transition-all
@@ -28,8 +29,10 @@ const Headshot: FC = () => {
         after:border-2
         after:border-slate-900
         after:rounded-lg
-        after:top-8
-        after:left-8
+        after:top-4
+        after:left-4
+        hoverable:after:top-8
+        hoverable:after:left-8
         after:-z-10
         hover:before:opacity-0
         hover:after:top-4
