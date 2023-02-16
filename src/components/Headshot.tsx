@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import headshot from "../../public/headshot.jpg";
+import headshot from "~/public/headshot.jpg";
 
 const Headshot: FC = () => {
   return (
