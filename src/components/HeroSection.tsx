@@ -15,7 +15,7 @@ const HeroSection = () => {
       >
         <p
           className="
-          text-slate-800
+          text-sky-600
           text-lg
           sm:text-xl
           font-medium"
