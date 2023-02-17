@@ -11,18 +11,23 @@ type TTriggerProps = {
   className?: string;
   target: string;
   activeClass?: string;
+  inactiveClass?: string;
 };
 const Trigger = ({
   children,
   className,
   target,
   activeClass,
+  inactiveClass,
 }: TTriggerProps) => {
   const cx = useContext(TabContext);
   return (
     <div
       onClick={() => cx.trigger(target)}
-      className={clsx(className, target === cx.target ? activeClass : "")}
+      className={clsx(
+        className,
+        target === cx.target ? activeClass : inactiveClass
+      )}
     >
       {children}
     </div>
@@ -34,11 +39,23 @@ type TTargetProps = {
   className?: string;
   target: string;
   activeClass?: string;
+  inactiveClass?: string;
 };
-const Target = ({ children, className, target, activeClass }: TTargetProps) => {
+const Target = ({
+  children,
+  className,
+  target,
+  activeClass,
+  inactiveClass,
+}: TTargetProps) => {
   const cx = useContext(TabContext);
   return (
-    <div className={clsx(className, target === cx.target ? activeClass : "")}>
+    <div
+      className={clsx(
+        className,
+        target === cx.target ? activeClass : inactiveClass
+      )}
+    >
       {children}
     </div>
   );
