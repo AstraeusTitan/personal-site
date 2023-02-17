@@ -1,7 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import HeroSection from "@/components/HeroSection";
+import WorkSection from "@/components/WorkSection";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
+        <WorkSection />
       </main>
     </>
   );
