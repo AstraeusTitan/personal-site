@@ -45,7 +45,8 @@ const Section = ({ children }: { children: ReactNode }) => {
     <Container>
       <section
         className="
-        px-8"
+        px-8
+        mb-16"
       >
         {children}
       </section>
