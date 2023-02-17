@@ -130,7 +130,7 @@ const WorkSection: FC = () => {
               key={i}
               inactiveClass="lg:hidden"
             >
-              <WorkDescription experience={exp} className="" />
+              <WorkDescription experience={exp} className="mb-8" />
             </Tabs.Target>
           );
         })}
