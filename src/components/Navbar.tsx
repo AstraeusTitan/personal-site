@@ -7,22 +7,18 @@ type TLink = {
   href: string;
 };
 
-const Navbar: FC<{links: TLink[]}> = ({ links }) => {
+const Navbar: FC<{ links: TLink[] }> = ({ links }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-10 relative">
+    <nav className="sticky top-0 z-10 relative sm:shadow">
       <div
         className="
         mx-auto
         max-w-7xl
-        px-2
-        sm:px-6
-        lg:px-8
-        bg-white
-        shadow"
+        bg-white"
       >
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-16 shadow sm:shadow-none items-center justify-between px-8">
           <div className="flex flex-1 justify-center items-center sm:justify-start">
             <div className="w-16">
               <Logo />
@@ -52,7 +48,7 @@ const Navbar: FC<{links: TLink[]}> = ({ links }) => {
           <div
             className="
             absolute
-            right-0
+            right-4
             sm:hidden"
           >
             <button
