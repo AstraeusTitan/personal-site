@@ -118,7 +118,7 @@ const Timeline: FC<TTimelineProps> = ({ nodes, className }) => {
 
 const WorkSection: FC = () => {
   return (
-    <Section>
+    <Section id="work">
       <Section.Title>Work</Section.Title>
       <Tabs initialTarget="panel-1" className="flex flex-col lg:flex-row mt-8">
         {/* timeline goes here */}

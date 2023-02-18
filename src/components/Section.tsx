@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ComponentProps, FC, ReactNode } from "react";
 import { Container } from "./Container";
 
 const Divider: FC = () => {
@@ -40,13 +40,14 @@ const Title: FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-const Section = ({ children }: { children: ReactNode }) => {
+const Section = ({ children, ...restProps }) => {
   return (
     <Container>
       <section
         className="
         px-8
         mb-16"
+        {...restProps}
       >
         {children}
       </section>

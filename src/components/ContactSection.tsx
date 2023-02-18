@@ -3,7 +3,7 @@ import Section from "./Section";
 
 const ContactSection: FC = () => {
   return (
-    <Section>
+    <Section id="contact">
       <Section.Title>Contact</Section.Title>
       <div
         className="

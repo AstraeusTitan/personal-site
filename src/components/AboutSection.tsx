@@ -4,7 +4,7 @@ import SkillsList from "./SkillsList";
 
 const AboutSection = () => {
   return (
-    <Section>
+    <Section id="about" className="scroll-mt-20">
       <Section.Title>About</Section.Title>
       <div
         className="
