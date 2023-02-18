@@ -16,8 +16,8 @@ const AboutSection: FC = () => {
         pb-8
         hoverable:pb-12"
       >
-        <div className="">
-          <p className="">
+        <div>
+          <p>
             Hello! My name is Cody and I enjoy creating tools that help people
             get their work done.
           </p>

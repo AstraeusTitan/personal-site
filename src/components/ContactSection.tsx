@@ -22,7 +22,12 @@ const ContactSection: FC = () => {
         >
           Get In Touch
         </h3>
-        <p className="max-w-md mt-4 text-center">
+        <p
+          className="
+          max-w-md
+          mt-4
+          text-center"
+        >
           I am currently looking for new work opportunities. If you want to work
           together or have any questions, send me a message and I&apos;ll get
           back to you.

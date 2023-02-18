@@ -55,11 +55,29 @@ const WorkDescription: FC<{ className?: string; experience: TExperience }> = ({
   return (
     <div className={className}>
       <div className="grid ">
-        <h4 className="text-xl mb-4">{experience.title}</h4>
-        <p className="text-sky-500 mb:justify-self-end">{experience.company}</p>
+        <h4
+          className="
+          text-xl
+          mb-4"
+        >
+          {experience.title}
+        </h4>
+        <p
+          className="
+          text-sky-500
+          mb:justify-self-end"
+        >
+          {experience.company}
+        </p>
       </div>
       <div>
-        <p className="text-zinc-600 text-sm">{experience.dates}</p>
+        <p
+          className="
+          text-zinc-600
+          text-sm"
+        >
+          {experience.dates}
+        </p>
       </div>
       <ul className="mt-4">
         {experience.points.map((point, i) => {
@@ -99,11 +117,18 @@ const Timeline: FC<TTimelineProps> = ({ nodes, className }) => {
             <Tabs.Trigger
               target={`panel-${i + 1}`}
               key={i}
-              className="w-fit group cursor-pointer"
+              className="
+                w-fit
+                group
+                cursor-pointer"
               activeClass="active"
             >
               <li className="w-56 mb-4">
-                <h4 className="text-lg group-[.active]:text-sky-400">
+                <h4
+                  className="
+                  text-lg
+                  group-[.active]:text-sky-400"
+                >
                   {node.title}
                 </h4>
                 <p>{node.company}</p>
@@ -120,9 +145,20 @@ const WorkSection: FC = () => {
   return (
     <Section id="work">
       <Section.Title>Work</Section.Title>
-      <Tabs initialTarget="panel-1" className="flex flex-col lg:flex-row mt-8">
-        {/* timeline goes here */}
-        <Timeline nodes={experiences} className="hidden lg:block" />
+      <Tabs
+        initialTarget="panel-1"
+        className="
+        flex
+        flex-col
+        lg:flex-row
+        mt-8"
+      >
+        <Timeline
+          nodes={experiences}
+          className="
+          hidden
+          lg:block"
+        />
         {experiences.map((exp, i) => {
           return (
             <Tabs.Target
