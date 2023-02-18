@@ -24,8 +24,8 @@ const ContactSection: FC = () => {
         </h3>
         <p className="max-w-md mt-4 text-center">
           I am currently looking for new work opportunities. If you want to work
-          together or have any questions, send me a message and I'll get back to
-          you.
+          together or have any questions, send me a message and I&apos;ll get
+          back to you.
         </p>
         <a
           href="mailto:clconstant21@gmail.com"

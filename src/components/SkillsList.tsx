@@ -1,11 +1,7 @@
 import clsx from "clsx";
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren, ReactNode } from "react";
 
-type TProps = {
-  children: ReactNode;
-};
-
-const Item: FC<TProps> = ({ children }) => {
+const Item: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <li
       className="
@@ -18,7 +14,7 @@ const Item: FC<TProps> = ({ children }) => {
   );
 };
 
-const SkillsList = ({ children }: TProps) => {
+const SkillsList = ({ children }: PropsWithChildren<{}>) => {
   return (
     <ul
       className="

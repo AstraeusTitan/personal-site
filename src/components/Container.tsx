@@ -1,10 +1,9 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, PropsWithChildren } from "react";
 import { clsx } from "clsx";
 
-type TContainerProps = {
-  children: ReactNode;
+type TContainerProps = PropsWithChildren<{
   className?: string;
-};
+}>;
 
 const Outer: FC<TContainerProps> = ({ children, className }) => {
   return (
@@ -22,7 +21,7 @@ const Inner: FC<TContainerProps> = ({ children, className }) => {
   );
 };
 
-export const Container = ({ children }: { children: ReactNode }) => {
+export const Container = ({ children }: PropsWithChildren<{}>) => {
   return (
     <Outer>
       <Inner>{children}</Inner>

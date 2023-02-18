@@ -1,8 +1,9 @@
+import { FC } from "react";
 import Headshot from "./Headshot";
 import Section from "./Section";
 import SkillsList from "./SkillsList";
 
-const AboutSection = () => {
+const AboutSection: FC = () => {
   return (
     <Section id="about" className="scroll-mt-20">
       <Section.Title>About</Section.Title>

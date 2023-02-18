@@ -1,25 +1,26 @@
 import clsx from "clsx";
-import { createContext, FC, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  FC,
+  PropsWithChildren,
+  ReactNode,
+  useContext,
+  useState,
+} from "react";
 
 const TabContext = createContext({
   trigger: (target: string) => {},
   target: "",
 });
 
-type TTriggerProps = {
-  children: ReactNode;
-  className?: string;
-  target: string;
-  activeClass?: string;
-  inactiveClass?: string;
-};
-const Trigger = ({
-  children,
-  className,
-  target,
-  activeClass,
-  inactiveClass,
-}: TTriggerProps) => {
+const Trigger: FC<
+  PropsWithChildren<{
+    className?: string;
+    target: string;
+    activeClass?: string;
+    inactiveClass?: string;
+  }>
+> = ({ children, className, target, activeClass, inactiveClass }) => {
   const cx = useContext(TabContext);
   return (
     <div
@@ -34,20 +35,14 @@ const Trigger = ({
   );
 };
 
-type TTargetProps = {
-  children: ReactNode;
-  className?: string;
-  target: string;
-  activeClass?: string;
-  inactiveClass?: string;
-};
-const Target = ({
-  children,
-  className,
-  target,
-  activeClass,
-  inactiveClass,
-}: TTargetProps) => {
+const Target: FC<
+  PropsWithChildren<{
+    className?: string;
+    target: string;
+    activeClass?: string;
+    inactiveClass?: string;
+  }>
+> = ({ children, className, target, activeClass, inactiveClass }) => {
   const cx = useContext(TabContext);
   return (
     <div
@@ -61,12 +56,11 @@ const Target = ({
   );
 };
 
-type TTabsProps = {
-  children: ReactNode;
-  className?: string;
-  initialTarget: string;
-};
-const Tabs = ({ children, className, initialTarget }: TTabsProps) => {
+const Tabs = ({
+  children,
+  className,
+  initialTarget,
+}: PropsWithChildren<{ className?: string; initialTarget: string }>) => {
   const [target, setTarget] = useState(initialTarget);
   return (
     <TabContext.Provider value={{ target: target, trigger: setTarget }}>

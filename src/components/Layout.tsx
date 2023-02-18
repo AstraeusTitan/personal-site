@@ -1,3 +1,4 @@
+import { FC, PropsWithChildren } from "react";
 import Navbar from "./Navbar";
 
 type TLink = {
@@ -10,7 +11,7 @@ const links: TLink[] = [
   { name: "Contact", href: "#contact" },
 ];
 
-const Layout = ({ children }) => {
+const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar links={links} />

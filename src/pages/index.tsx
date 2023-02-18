@@ -17,7 +17,7 @@ export default function Home() {
           rel="icon"
           href={`data:image/svg+xml,${encodeURIComponent(
             ReactDOMServer.renderToStaticMarkup(
-              <Logo inlineStrokeStyle={{ stroke: "#38bdf8" }} />
+              <Logo strokeStyle={{ stroke: "#38bdf8" }} />
             )
           )}`}
         />

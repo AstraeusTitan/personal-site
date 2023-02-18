@@ -1,14 +1,11 @@
 import clsx from "clsx";
+import { CSSProperties, FC } from "react";
 
-const Logo = ({
-  className,
-  strokeStyle,
-  inlineStrokeStyle,
-}: {
+const Logo: FC<{
   className?: string;
-  strokeStyle?: string;
-  inlineStrokeStyle?: object;
-}) => {
+  strokeClass?: string;
+  strokeStyle?: CSSProperties;
+}> = ({ className, strokeClass, strokeStyle }) => {
   const defaultStroke = "stroke-sky-400";
 
   return (
@@ -38,12 +35,12 @@ const Logo = ({
               <g clipPath="url(#_clip1)">
                 <path
                   id="left-fill-path"
-                  className={clsx(defaultStroke, strokeStyle)}
+                  className={clsx(defaultStroke, strokeClass)}
                   d="M4981.99,625.834L4429.93,1175.32C4380.32,1226.14 4311.08,1257.7 4234.52,1257.7C4083.79,1257.7 3961.42,1135.33 3961.42,984.596C3961.42,833.864 4083.79,711.489 4234.52,711.489C4273.55,711.489 4310.67,719.693 4344.27,734.467"
                   style={{
                     fill: "none",
                     strokeWidth: "112.4px",
-                    ...inlineStrokeStyle,
+                    ...strokeStyle,
                   }}
                 />
               </g>
@@ -55,12 +52,12 @@ const Logo = ({
               <g clipPath="url(#_clip2)">
                 <path
                   id="right-fill-path"
-                  className={clsx(defaultStroke, strokeStyle)}
+                  className={clsx(defaultStroke, strokeClass)}
                   d="M4981.99,625.834L4429.93,1175.32C4380.32,1226.14 4311.08,1257.7 4234.52,1257.7C4083.79,1257.7 3961.42,1135.33 3961.42,984.596C3961.42,833.864 4083.79,711.489 4234.52,711.489C4273.55,711.489 4310.67,719.693 4344.27,734.467"
                   style={{
                     fill: "none",
                     strokeWidth: "112.4px",
-                    ...inlineStrokeStyle,
+                    ...strokeStyle,
                   }}
                 />
               </g>

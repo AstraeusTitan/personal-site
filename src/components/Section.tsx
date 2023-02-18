@@ -1,4 +1,4 @@
-import { ComponentProps, FC, ReactNode } from "react";
+import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { Container } from "./Container";
 
 const Divider: FC = () => {
@@ -20,7 +20,7 @@ const Divider: FC = () => {
   );
 };
 
-const Title: FC<{ children: ReactNode }> = ({ children }) => {
+const Title: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <div
       className="
@@ -40,7 +40,7 @@ const Title: FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-const Section = ({ children, ...restProps }) => {
+const Section = ({ children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLDivElement>>) => {
   return (
     <Container>
       <section

@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { Container } from "./Container";
 
-const HeroSection = () => {
+const HeroSection: FC = () => {
   return (
     <Container>
       <div

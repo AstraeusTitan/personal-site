@@ -7,11 +7,7 @@ type TLink = {
   href: string;
 };
 
-type TProps = {
-  links: TLink[];
-};
-
-const Navbar: FC<TProps> = ({ links }) => {
+const Navbar: FC<{links: TLink[]}> = ({ links }) => {
   const [open, setOpen] = useState(false);
 
   return (
